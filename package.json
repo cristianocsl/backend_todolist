@@ -6,7 +6,7 @@
   "scripts": {
     "test": "",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "gcmsg": "git-cz"
   },
   "repository": {
     "type": "git",
