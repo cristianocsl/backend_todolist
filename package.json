@@ -4,7 +4,8 @@
   "description": "Aplicação backend em NodeJs integrada com MongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,15 @@
   "bugs": {
     "url": "https://github.com/cristianocsl/backend_todolist/issues"
   },
-  "homepage": "https://github.com/cristianocsl/backend_todolist#readme"
+  "homepage": "https://github.com/cristianocsl/backend_todolist#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "husky": "^7.0.0"
+  }
 }
