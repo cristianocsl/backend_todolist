@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Aplicação backend em NodeJs integrada com MongoDB",
   "main": "index.js",
+  "lint-staged": {
+    "*.js": [
+      "esling --fix"
+    ]
+  },
   "scripts": {
     "test": "",
     "prepare": "husky install",
