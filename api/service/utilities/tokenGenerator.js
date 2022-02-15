@@ -6,4 +6,4 @@ const jwtConfig = { expiresIn: '14d', algorithm: 'HS256' };
 
 const tokenGenerator = (payload) => jwt.sign(payload, JWT_SECRET, jwtConfig);
 
-module.exports = tokenGenerator;
+module.exports = { tokenGenerator };
