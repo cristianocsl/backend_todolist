@@ -2,7 +2,8 @@ const { client } = require('../connection');
 
 const register = async (userInfos) => {
   const db = client.db('todoDatabase');
-  await db.collection('users').insertOne(userInfos);
+  const { insertedId } = await db.collection('users').insertOne(userInfos);
+  return { _id: insertedId };
 };
 
 module.exports = register;
