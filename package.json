@@ -4,7 +4,7 @@
   "description": "Aplicação backend em NodeJs integrada com MongoDB",
   "main": "index.js",
   "scripts": {
-    "test": "",
+    "test": "mocha tests",
     "prepare": "husky install",
     "gcmsg": "lint-staged"
   },
