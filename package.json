@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha ./tests/**/*$NAME*.test.js --exit",
     "prepare": "husky install",
-    "gcmsg": "lint-staged"
+    "gcmsg": "lint-staged",
+    "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json ."
   },
   "lint-staged": {
     "*.js": [

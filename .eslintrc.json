@@ -4,9 +4,12 @@
         "es2021": true,
         "node": true
     },
-    "extends": "eslint:recommended",
+    "extends": "trybe-backend",
     "parserOptions": {
         "ecmaVersion": "latest"
+    },
+    "globals": {
+        "db": "writable"
     },
     "rules": {
         "semi": ["error", "always"],
