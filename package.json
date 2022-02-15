@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "Aplicação backend em NodeJs integrada com MongoDB",
   "main": "index.js",
-  "lint-staged": {
-    "*.js": [
-      "esling --fix"
-    ]
-  },
   "scripts": {
     "test": "",
     "prepare": "husky install",
-    "gcmsg": "git-cz"
+    "gcmsg": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
   },
   "repository": {
     "type": "git",
@@ -29,11 +29,6 @@
     "url": "https://github.com/cristianocsl/backend_todolist/issues"
   },
   "homepage": "https://github.com/cristianocsl/backend_todolist#readme",
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
