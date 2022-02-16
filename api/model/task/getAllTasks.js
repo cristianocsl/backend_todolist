@@ -1,11 +1,11 @@
-const { ObjectId } = require('mongodb');
 const { client } = require('../connection');
 const { isValid } = require('../util/validateObjectId');
 
 const getAllTasks = async (userId) => {
   await isValid(userId);
   const db = client.db('todoDatabase');
-  return db.collection('tasks').find({ _id: ObjectId(userId) }).toArray();
+  const tasks = await db.collection('tasks').find({ userId }).toArray();
+  return tasks;
 };
 
 module.exports = getAllTasks;
