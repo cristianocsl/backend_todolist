@@ -3,10 +3,10 @@ const { findTaskById } = require('../../model/task');
 const { ApiError: { SendToErrorMiddleware } } = require('../../error/apiError');
 const { TASK_NOT_EXIST } = require('../../error/msgCodeError');
 
-const deleteTask = async (taskId, task) => {
+const deleteTask = async (taskId) => {
   const foundTask = await findTaskById(taskId);
   if (!foundTask) return SendToErrorMiddleware(TASK_NOT_EXIST);
-  await remove(taskId, task);
+  await remove(taskId);
 };
 
 module.exports = deleteTask;
