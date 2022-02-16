@@ -1,10 +1,12 @@
+const { ObjectId } = require('mongodb');
 const { client } = require('../connection');
 const { isValid } = require('../util/validateObjectId');
 
-const updateTask = async (_id) => {
+const deleteTask = async (_id) => {
   await isValid(_id);
   const db = client.db('todoDatabase');
-  await db.collection('tasks').deleteOne(_id);
+  const del = await db.collection('tasks').deleteOne({ _id: ObjectId(_id) });
+  console.log(del);
 };
 
-module.exports = updateTask;
+module.exports = deleteTask;
