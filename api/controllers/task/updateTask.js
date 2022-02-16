@@ -11,6 +11,7 @@ const updateTask = async (req, res, next) => {
 
   try {
     await update(taskId, body);
+    
     return res.status(OK).json({ message: 'Task updated successfully' });
   } catch (err) {
     next(err);

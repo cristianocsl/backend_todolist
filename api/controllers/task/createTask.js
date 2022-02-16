@@ -7,11 +7,13 @@ const createTask = async (req, res, next) => {
 
   const { error } = await validateTask(body);
 
-  if (error) return next(error);
+  if (error) return next(error); 
 
-  const recipe = await create({ ...body, userId: _id });
-
-  return res.status(CREATED).json(recipe);
+  try {
+    const recipe = await create({ ...body, userId: _id });
+    
+    return res.status(CREATED).json(recipe);
+  } catch (err) { next(err); }
 };
 
 module.exports = createTask;
