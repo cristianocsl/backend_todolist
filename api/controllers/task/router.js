@@ -1,7 +1,7 @@
 const express = require('express');
 const { getAllTasks } = require('.');
 const { createTask } = require('.');
-// const { updateTask } = require('.');
+const { updateTask } = require('.');
 // const { deleteTask } = require('.');
 const { authentication } = require('../../middlewares/auth');
 
@@ -11,7 +11,7 @@ router.get('/', authentication, getAllTasks);
 
 router.post('/', authentication, createTask);
 
-// router.put('/:id', authentication, updateTask);
+router.put('/:taskId', authentication, updateTask);
 
 // router.delete('/:id', authentication, deleteTask);
 
