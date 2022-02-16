@@ -3,7 +3,7 @@ const { ApiError: { SendToErrorMiddleware } } = require('../../error/apiError');
 const { TOKEN_NOT_FOUND, INVALID_TOKEN } = require('../../error/msgCodeError');
 require('dotenv').config();
 
-module.exports = (req, _res, next) => {
+module.exports.authentication = (req, _res, next) => {
   const token = req.headers.authorization;
   if (!token) return SendToErrorMiddleware(TOKEN_NOT_FOUND);
 
