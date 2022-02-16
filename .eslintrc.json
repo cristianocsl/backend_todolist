@@ -8,14 +8,6 @@
     "parserOptions": {
         "ecmaVersion": "latest"
     },
-    "globals": {
-        "db": "writable"
-    },
     "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "single"],
-        "camelcase": ["error", {
-            "ignoreDestructuring": true
-        }]
     }
 }
