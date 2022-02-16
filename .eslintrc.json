@@ -4,10 +4,15 @@
         "es2021": true,
         "node": true
     },
-    "extends": "trybe-backend",
+    "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaVersion": "latest"
     },
     "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"],
+        "camelcase": ["error", {
+            "ignoreDestructuring": true
+        }]
     }
 }
