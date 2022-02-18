@@ -7,8 +7,6 @@ const { tokenGenerator } = require('../utilities/tokenGenerator');
 const login = async ({ email, password: inputPassword }) => {
   const user = await findUserByEmail(email);
 
-  console.log(user.password);
-
   if (!user || md5(inputPassword) !== user.password) return SendToErrorMiddleware(INCORRECT_LOGIN);
 
   const { _id, name } = user;
