@@ -3,7 +3,7 @@ const {
   CONFLICT,
   UNAUTHORIZED, NOT_FOUND } = require('http-status-codes').StatusCodes;
 
-const INCORRECT_LOGIN = { code: BAD_REQUEST, message: 'Invalid fields' };
+const INCORRECT_LOGIN = { code: BAD_REQUEST, message: 'Email or password incorrect' };
 
 const EMAIL_EXISTING = { code: CONFLICT, message: 'User already registered' };
 
