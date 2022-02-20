@@ -13,7 +13,7 @@ const login = async ({ email, password: inputPassword }) => {
 
   const token = tokenGenerator({ _id, name, email });
 
-  return { token };
+  return { name: `${name.split(' ')[0]}`, token };
 };
 
 module.exports = login;
