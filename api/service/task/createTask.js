@@ -1,10 +1,10 @@
 const { createTask: create } = require('../../model/task');
 
-const createTask = async (task) => {
+const createTask = async (taskAndUserId) => {
   const createdAt = new Date().toISOString();
-  const status = task.status || 'To do';
-  const { _id } = await create({ ...task, createdAt, status });
-  return { _id, task, createdAt, status };
+  const status = taskAndUserId.status || 'To do';
+  const { _id } = await create({ ...taskAndUserId, createdAt, status });
+  return { _id, ...taskAndUserId, createdAt, status };
 };
 
 module.exports = createTask;
