@@ -14,7 +14,7 @@ const register = async ({ name, email, password }) => {
 
   const token = tokenGenerator({ _id, name, email });
 
-  return { token };
+  return { name: `${name.split(' ')[0]}`, token };
 };
 
 module.exports = register;
