@@ -2,7 +2,6 @@ const { BAD_REQUEST, INTERNAL_SERVER_ERROR } = require('http-status-codes').Stat
 const { ApiError } = require('../error/apiError');
 
 const errorHandler = (err, _req, res, _next) => {
-  console.error('erro no backend', err);
   if (err.isJoi) {
     return res.status(BAD_REQUEST).json({ message: err.details[0].message });
   }
