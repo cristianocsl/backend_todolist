@@ -3,7 +3,7 @@ const Joi = require('joi');
 const ERR_LOGIN = {
   'string.base': 'Preencha apenas com letras.',
   'string.empty': 'Este campo não pode ser vazio.',
-  'string.min': 'Utilize no mínimo de 3 caracteres.',
+  'string.min': 'Utilize no mínimo de 6 caracteres.',
   'any.required': 'Este campo é obrigatório.',
 };
 
