@@ -5,7 +5,7 @@ const SCHEMA = Joi.object({
     .required(),
   email: Joi.string().email().not().empty()
     .required(),
-  password: Joi.string().length(6).not().empty()
+  password: Joi.string().min(6).not().empty()
     .required(),
 });
 
