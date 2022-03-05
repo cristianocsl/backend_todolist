@@ -3,19 +3,19 @@ const {
   CONFLICT,
   UNAUTHORIZED, NOT_FOUND } = require('http-status-codes').StatusCodes;
 
-const INCORRECT_LOGIN = { code: BAD_REQUEST, message: 'Invalid fields' };
+const INCORRECT_LOGIN = { code: BAD_REQUEST, message: 'Email ou senha incorretos!' };
 
-const EMAIL_EXISTING = { code: CONFLICT, message: 'User already registered' };
+const EMAIL_EXISTING = { code: CONFLICT, message: 'Usuário já está registrado!' };
 
-const TOKEN_NOT_FOUND = { code: UNAUTHORIZED, message: 'Token not found' };
+const TOKEN_NOT_FOUND = { code: UNAUTHORIZED, message: 'Token não encontrado!' };
 
-const INVALID_TOKEN = { code: UNAUTHORIZED, message: 'Expired or invalid token' };
+const INVALID_TOKEN = { code: UNAUTHORIZED, message: 'Token expirado ou inválido!' };
 
-const USER_DOES_NOT_EXIST = { code: NOT_FOUND, message: 'User does not exist' };
+const USER_DOES_NOT_EXIST = { code: NOT_FOUND, message: 'Usuário não encontrado!' };
 
-const TASK_NOT_EXIST = { code: NOT_FOUND, message: 'Task does not exist' };
+const TASK_NOT_EXIST = { code: NOT_FOUND, message: 'Tarefa não existente!' };
 
-const UNAUTHORIZED_USER = { code: UNAUTHORIZED, message: 'Unauthorized user' };
+const UNAUTHORIZED_USER = { code: UNAUTHORIZED, message: 'Usuário não autorizado!' };
 
 module.exports = {
   INCORRECT_LOGIN,

@@ -8,7 +8,10 @@ const register = async (req, res, next) => {
   if (error) return next(error);
   try {
     const token = await create(reqBody);
-    return res.status(CREATED).json(token);
+    return res.status(CREATED).json({
+      message: 'Cadastro realizado com sucesso!',
+      token,
+    });
   } catch (err) {
     next(err);
   }

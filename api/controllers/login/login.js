@@ -6,11 +6,13 @@ const login = async (req, res, next) => {
   const reqBody = req.body;
   const { error } = await validateLogin(reqBody);
   if (error) return next(error);
-  const token = await loginWith(reqBody);
-  return res.status(OK).json({
-    message: 'Login efetuado com sucesso!',
-    ...token,
-  });
+  try {
+    const token = await loginWith(reqBody);
+    return res.status(OK).json({
+      message: 'Login efetuado com sucesso!',
+      ...token,
+    });
+  } catch (err) { next(err); }
 };
 
 module.exports = login;
