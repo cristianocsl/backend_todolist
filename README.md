@@ -81,7 +81,7 @@ Casos de falha na validação da requisição terão resposta com <code>status 4
 }
 ```
 
-### Casos de sucesso na requisição para a rota <code>/register</code>:
+### Caso de sucesso na requisição para a rota <code>/register</code>:
 
 Casos de sucesso na validação da requisição terão resposta com <code>status 201</code> e uma mensagem de erro como os exemplos abaixo:
 
