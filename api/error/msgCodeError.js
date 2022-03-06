@@ -11,7 +11,9 @@ const {
   
   const INVALID_TOKEN = { code: UNAUTHORIZED, message: 'Expired or invalid token' };
   
-  const USER_DOES_NOT_EXIST = { code: NOT_FOUND, message: 'User does not exist' };
+  const USER_DOES_NOT_EXIST = {
+    code: NOT_FOUND, message: 'User does not exist or email is incorrect',
+  };
   
   const TASK_NOT_EXIST = { code: NOT_FOUND, message: 'Task does not exist' };
   
