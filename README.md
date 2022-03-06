@@ -145,11 +145,17 @@ Casos de falha na validação da requisição terão resposta com <code>status 4
 }
 ```
 
-
-<strong>Campo email ou campo senha incorretos:</strong>
+<strong>Campo email com um email que não existe no banco de dados:</strong>
 ```json
 {
-  "message": "Email or password incorrect"
+  "message": "User does not exist or email is incorrect"
+}
+```
+
+<strong>Campo senha com uma senha diferente da que existe no banco de dados:</strong>
+```json
+{
+  "message": "Incorrect passoword"
 }
 ```
 
