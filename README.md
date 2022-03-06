@@ -331,6 +331,6 @@ Caso de falha na requisição devido a um identificador da tarefa com tamanho in
 
 ### Caso de sucesso na requisição para a rota DELETE <code>/task/:taskId</code>:
 
-Caso de sucesso na validação da requisição terá resposta com <code>status 200</code> e ausência de mensagem.
+Caso de sucesso na validação da requisição terá resposta com <code>status 204</code> e ausência de mensagem.
 
 
