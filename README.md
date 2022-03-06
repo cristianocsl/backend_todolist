@@ -87,10 +87,8 @@ Casos de sucesso na validação da requisição terão resposta com <code>status
 
 ```json
 {
-  "message": "User registered successfully!!",
-  "token": {
-    "name": "my name",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjI0MzgzYjkxZjZiY2VkOWM2ZTgxMTYiLCJuYW1lIjoiYXNkc2FkdyIsImVtYWlsIjoibGxsLWNjcmlzdGlhbm9AZ21haWwuY29tIiwiaWF0IjoxNjQ2NTQwODU5LCJleHAiOjE2NDc3NTA0NTl9.zyGixhwkRPZHAmhkJSysjLYVJidOHTut5IgIdKZIE-w"
-  }
+  "message": "User registered successfully!",
+  "name": "my name",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjI0MzkyZmNkYzVhODE4NGUxZDM0NmIiLCJuYW1lIjoiYXNkc2FkdyIsImVtYWlsIjoibGxsLWNjcmlzdGlhbm5vQGdtYWlsLmNvbSIsImlhdCI6MTY0NjU0MTEwNCwiZXhwIjoxNjQ3NzUwNzA0fQ.IJmBCQLwpqgMIczzYSO5t3FFqcNTVdmtN-k2WNar2ls"
 }
 ```
