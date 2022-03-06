@@ -6,7 +6,7 @@ const routerTask = require('./task/router');
 
 const root = express.Router({ mergeParams: true });
 
-root.use('/user', routerUser);
+root.use('/register', routerUser);
 root.use('/login', routerLogin);
 root.use('/task', routerTask);
 
