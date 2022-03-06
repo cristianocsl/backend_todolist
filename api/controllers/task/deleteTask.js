@@ -1,11 +1,11 @@
-const { OK } = require('http-status-codes').StatusCodes;
+const { NO_CONTENT } = require('http-status-codes').StatusCodes;
 const { deleteTask: remove } = require('../../service/task');
 
 const deleteTask = async (req, res, next) => {
   const { params: { taskId } } = req;
   try {
     await remove(taskId);
-    return res.status(OK).json();
+    return res.status(NO_CONTENT).json();
   } catch (err) { next(err); }
 };
 
