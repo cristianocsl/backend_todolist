@@ -171,7 +171,7 @@ Casos de sucesso na validação da requisição terão resposta com <code>status
 }
 ```
 
-## Criando tarefas:
+## Criando tarefas
 
 ### Endpoint POST <code>/task</code>
 
@@ -194,6 +194,15 @@ Casos de falha na validação da requisição terão resposta com <code>status 4
 }
 ```
 
+Caso de falha na requisição devido a token terá como resposta o <code>status 401</code> acompanhado da seguinte mensagem:
+
+<strong>Caso de token inválido ou expirado:</strong>
+```json
+{
+  "message": "Expired or invalid token"
+}
+```
+
 ### Caso de sucesso na requisição para a rota POST <code>/task</code>:
 
 Casos de sucesso na validação da requisição terão resposta com <code>status 201</code> e um objeto json com as seguintes chaves:
@@ -207,12 +216,51 @@ Casos de sucesso na validação da requisição terão resposta com <code>status
 ```json
 {
   "_id": "6224cc1d512edf339950f1f8",
-  "task": "acordar cedo",
+  "task": "Minha tarefa de hoje",
   "userId": "6224392fcdc5a8184e1d346b",
   "createdAt": "06/03/2022 11:58:37",
   "status": "To do"
 }
 ```
+
+## Visualizando tarefas criadas
+
+### Endpoint GET <code>/task</code>
+
+### Casos de falha na requisição para a rota GET <code>/task</code>:
+
+Caso de falha na requisição devido a token terá como resposta o <code>status 401</code> acompanhado da seguinte mensagem:
+
+<strong>Caso de token inválido ou expirado:</strong>
+```json
+{
+  "message": "Expired or invalid token"
+}
+```
+
+### Caso de sucesso na requisição para a rota GET <code>/task</code>:
+
+Casos de sucesso na validação da requisição terão resposta com <code>status 200</code> com a seguinte estrutura:
+
+```json
+[
+  {
+    "_id": "6224cc1d512edf339950f1f8",
+    "task": "Minha tarefa número 1 de hoje",
+    "userId": "6224392fcdc5a8184e1d346b",
+    "createdAt": "06/03/2022 11:58:37",
+    "status": "To do"
+  },
+  {
+    "_id": "6224d588512edf339950f1f9",
+    "task": "Minha tarefa número 2 de hoje",
+    "userId": "6224392fcdc5a8184e1d346b",
+    "createdAt": "06/03/2022 12:38:48",
+    "status": "To do"
+  }
+]
+```
+
 
 
 
