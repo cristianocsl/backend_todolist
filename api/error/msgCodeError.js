@@ -19,6 +19,8 @@ const {
   
   const UNAUTHORIZED_USER = { code: UNAUTHORIZED, message: 'Unauthorized user' };
 
+  const INVALID_ID_LENGTH = { code: BAD_REQUEST, message: 'Mongodb id must be 24 characters' };
+
 module.exports = {
   INCORRECT_LOGIN,
   EMAIL_EXISTING,
@@ -27,4 +29,5 @@ module.exports = {
   USER_DOES_NOT_EXIST,
   TASK_NOT_EXIST,
   UNAUTHORIZED_USER,
+  INVALID_ID_LENGTH,
 };
