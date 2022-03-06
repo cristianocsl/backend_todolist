@@ -27,8 +27,9 @@ Para as requisições a seguir deve ser utilizado este link: https://backend-tod
 
 * senha deve ser uma string com 6 ou mais caracteres;
 
-* Casos de falha na validação da requisição terão resposta com status 400 e uma mensagem de erro como o exemplo abaixo:
+### Casos de falha:
 
+Casos de falha na validação da requisição terão resposta com status 400 e uma mensagem de erro como o exemplo abaixo:
 
 <strong>Campo name não preenchido:</strong>
 ```json
