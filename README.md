@@ -44,10 +44,30 @@ Para as requisições a seguir deve ser utilizado este link: https://backend-tod
 }
 ```
 
-
 <strong>Campo password não preenchido:</strong>
 ```json
 {
   "message": "\"password\" is not allowed to be empty"
+}
+```
+
+<strong>Campo name com menos de três caracteres:</strong>
+```json
+{
+  "message": "\"name\" length must be 3 characters long"
+}
+```
+
+<strong>Campo password com menos de 6 carecteres:</strong>
+```json
+{
+  "message": "\"password\" length must be 6 characters long"
+}
+```
+
+<strong>Campo email com formato inválido:</strong>
+```json
+{
+  "message": "\"email\" must be a valid email"
 }
 ```
