@@ -9,7 +9,7 @@ const login = async (req, res, next) => {
   try {
     const token = await loginWith(reqBody);
     return res.status(OK).json({
-      message: 'Login successfull!!',
+      message: 'Login successfull!',
       ...token,
     });
   } catch (err) { next(err); }

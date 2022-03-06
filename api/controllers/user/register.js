@@ -9,7 +9,7 @@ const register = async (req, res, next) => {
   try {
     const token = await create(reqBody);
     return res.status(CREATED).json({
-      message: 'User registered successfully!!',
+      message: 'User registered successfully!',
       token,
     });
   } catch (err) {
