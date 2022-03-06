@@ -29,7 +29,7 @@ Para as requisições a seguir deve ser utilizado este link: https://backend-tod
 
 ### Casos de falha:
 
-Casos de falha na validação da requisição terão resposta com status 400 e uma mensagem de erro como o exemplo abaixo:
+Casos de falha na validação da requisição terão resposta com <code>status 400</code> e uma mensagem de erro como o exemplo abaixo:
 
 <strong>Campo name não preenchido:</strong>
 ```json
