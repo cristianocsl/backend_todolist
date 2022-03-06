@@ -287,14 +287,14 @@ Caso de falha na requisição devido a um identificador incorreto da tarefa ter�
 
 Caso de falha na requisição devido a um identificador da tarefa com tamanho incompatível com o do identificador do MongoDB terá como resposta o <code>status 400</code> acompanhado da seguinte mensagem:
 
-<strong>Caso de token inválido ou expirado:</strong>
+<strong>Caso de identificador com tamanho incompatível com o do mongodb:</strong>
 ```json
 {
   "message": "Mongodb id must be 24 characters"
 }
 ```
 
-### Caso de sucesso na requisição para a rota PUT <code>/task</code>:
+### Caso de sucesso na requisição para a rota PUT <code>/task/:taskId</code>:
 
 Casos de sucesso na validação da requisição terão resposta com <code>status 200</code> com a seguinte mensagem:
 
@@ -305,5 +305,32 @@ Casos de sucesso na validação da requisição terão resposta com <code>status
 ```
 
 
+## Removendo tarefas criadas
+
+### Endpoint DELETE <code>/task/:taskId</code>
+
+### Casos de falha na requisição para a rota DELETE <code>/task/:taskId</code>:
+
+Caso de falha na requisição devido a um identificador incorreto da tarefa terá como resposta o <code>status 404</code> acompanhado da seguinte mensagem:
+
+<strong>Caso de identificador incorreto da tarefa:</strong>
+```json
+{
+  "message": "Task does not exist"
+}
+```
+
+Caso de falha na requisição devido a um identificador da tarefa com tamanho incompatível com o do identificador do MongoDB terá como resposta o <code>status 400</code> acompanhado da seguinte mensagem:
+
+<strong>Caso de identificador com tamanho incompatível com o do mongodb:</strong>
+```json
+{
+  "message": "Mongodb id must be 24 characters"
+}
+```
+
+### Caso de sucesso na requisição para a rota DELETE <code>/task/:taskId</code>:
+
+Caso de sucesso na validação da requisição terá resposta com <code>status 200</code> e ausência de mensagem.
 
 
