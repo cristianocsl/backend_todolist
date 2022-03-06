@@ -170,3 +170,51 @@ Casos de sucesso na validação da requisição terão resposta com <code>status
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjI0MzkyZmNkYzVhODE4NGUxZDM0NmIiLCJuYW1lIjoiYXNkc2FkdyIsImVtYWlsIjoibGxsLWNjcmlzdGlhbm5vQGdtYWlsLmNvbSIsImlhdCI6MTY0NjU0MTEwNCwiZXhwIjoxNjQ3NzUwNzA0fQ.IJmBCQLwpqgMIczzYSO5t3FFqcNTVdmtN-k2WNar2ls"
 }
 ```
+
+## Criando tarefas:
+
+### Endpoint POST <code>/task</code>
+
+* o corpo da requisição deve ter o seguinte formato:
+
+```json
+{
+  "task": "Minha tarefa de hoje",
+}
+```
+
+### Casos de falha na requisição para a rota POST <code>/task</code>:
+
+Casos de falha na validação da requisição terão resposta com <code>status 400</code> e a seguinte mensagem de erro:
+
+<strong>Campo task não preenchido:</strong>
+```json
+{
+  "message": "\"task\" is not allowed to be empty"
+}
+```
+
+### Caso de sucesso na requisição para a rota POST <code>/task</code>:
+
+Casos de sucesso na validação da requisição terão resposta com <code>status 201</code> e um objeto json com as seguintes chaves:
+
+* _id: identificador da tarefa criada;
+* task: tarefa inserida pelo usuário;
+* userId: identificador do usuário, criado no momento de seu cadastro no banco de dados;
+* createdAt: data de criação da tarefa, inserida automaticamente no momento de sua criação;
+* status: classificador do estado da tarefa criada, que, no momento da criação da tarefa, é automaticamente definido como "To do", podendo ser modificado pelo usuário após a criação da tarefa.
+
+```json
+{
+  "_id": "6224cc1d512edf339950f1f8",
+  "task": "acordar cedo",
+  "userId": "6224392fcdc5a8184e1d346b",
+  "createdAt": "06/03/2022 11:58:37",
+  "status": "To do"
+}
+```
+
+
+
+
+
