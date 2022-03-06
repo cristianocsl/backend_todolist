@@ -333,4 +333,55 @@ Caso de falha na requisição devido a um identificador da tarefa com tamanho in
 
 Caso de sucesso na validação da requisição terá resposta com <code>status 204</code> e ausência de mensagem.
 
+## Ferramentas utilizadas
+
+
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript);
+- [MongoDB Atlas](https://www.mongodb.com/atlas/database): serviço de banco de dados de documentos em nuvem global para aplicações modernas;
+- [Node.js](https://nodejs.org/en/docs/);
+- [Heroku](https://id.heroku.com/): plataforma de hospedagem, configuração, testagem e publicação de projetos virtuais na nuvem. 
+
+## Bibliotecas
+
+- [body-parser](https://www.npmjs.com/package/body-parser): analise dos corpos de solicitação de entrada em um middleware antes de seus manipuladores;
+- [cors](https://www.npmjs.com/package/cors): habilita requisições do front-end;
+- [date-fns](https://www.npmjs.com/package/date-fns): conversão e opções de formato de datas;
+- [dotenv](https://www.npmjs.com/package/dotenv): carrega variáveis de ambiente para deploy;
+- [Express](https://www.npmjs.com/package/express): criação e manipulação de rotas;
+- [eslint](https://www.npmjs.com/package/eslint): padrão de estilização de código;
+- [http-status-codes](https://www.npmjs.com/package/http-status-codes): facilitar legibilidade dos códigos http;
+- [joi](https://www.npmjs.com/package/joi): validação de requisições;
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken): realiza autenticação entre duas partes por meio de um token assinado que autentica uma requisição web;
+- [md5](https://www.npmjs.com/package/md5): criptografia;
+- [mongodb](https://www.npmjs.com/package/mongodb): comunicação com bancos de dados;
+- [nodemon](https://www.npmjs.com/package/nodemon): permite modo watch do servidor durante o desenvolvimento.
+
+## Contatos
+
+- Email: cslcristiano@gmail.com
+- LinkedIn: (https://www.linkedin.com/in/cristianoseabralima/
+- Github: https://github.com/cristianocsl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
