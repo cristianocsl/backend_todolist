@@ -58,14 +58,14 @@ Casos de falha na validação da requisição terão resposta com <code>status 4
 <strong>Campo name com menos de três caracteres:</strong>
 ```json
 {
-  "message": "\"name\" length must be 3 characters long"
+  "message": "\"name\" length must be at least 3 characters long"
 }
 ```
 
 <strong>Campo password com menos de 6 carecteres:</strong>
 ```json
 {
-  "message": "\"password\" length must be 6 characters long"
+  "message": "\"password\" length must be at least 6 characters long"
 }
 ```
 
@@ -141,7 +141,7 @@ Casos de falha na validação da requisição terão resposta com <code>status 4
 <strong>Campo password com menos de 6 carecteres:</strong>
 ```json
 {
-  "message": "\"password\" length must be 6 characters long"
+  "message": "\"password\" length must be at least 6 characters long"
 }
 ```
 
