@@ -28,7 +28,7 @@ Para as requisições a seguir deve ser utilizado este link: https://backend-tod
 * senha deve ser uma string com 6 ou mais caracteres;
 
 
-## Casos de falha:
+### Casos de falha na requisição para a rota <code>/register</code>:
 
 Casos de falha na validação da requisição terão resposta com <code>status 400</code> e uma mensagem de erro como os exemplos abaixo:
 
@@ -73,3 +73,14 @@ Casos de falha na validação da requisição terão resposta com <code>status 4
   "message": "\"email\" must be a valid email"
 }
 ```
+
+<strong>Campo email com email que já existe no banco de dados (<code>status 409</code>):</strong>
+```json
+{
+  "message": "User already registered"
+}
+```
+
+### Casos de sucesso na requisição para a rota <code>/register</code>:
+
+Casos de sucesso na validação da requisição terão resposta com <code>status 400</code> e uma mensagem de erro como os exemplos abaixo:
