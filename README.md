@@ -361,7 +361,7 @@ Caso de sucesso na validação da requisição terá resposta com <code>status 2
 ## Contatos
 
 - Email: cslcristiano@gmail.com
-- LinkedIn: (https://www.linkedin.com/in/cristianoseabralima/
+- LinkedIn: https://www.linkedin.com/in/cristianoseabralima/
 - Github: https://github.com/cristianocsl
 
 
