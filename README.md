@@ -8,7 +8,7 @@ API (Application Programming Interface) desenvolvida em NodeJS com MongoDB e Mon
 
 ## Rotas
 
-Para as requisições a seguir deve ser utilizado este link: https://backend-todo-list-cristiano.herokuapp.com/
+Para as requisições a seguir deve ser utilizado este link: https://backend-todo-list-cristiano.herokuapp.com
 
 ## Registro do usuário
 
