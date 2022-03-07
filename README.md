@@ -358,6 +358,10 @@ Caso de sucesso na validação da requisição terá resposta com <code>status 2
 - [mongodb](https://www.npmjs.com/package/mongodb): comunicação com bancos de dados;
 - [nodemon](https://www.npmjs.com/package/nodemon): permite modo watch do servidor durante o desenvolvimento.
 
+## Implementações futuras
+
+- cobertura de testes;
+
 ## Contatos
 
 - Email: cslcristiano@gmail.com
