@@ -1,4 +1,4 @@
-const md5 = require('md5');
+const { comparator } = require('../utilities/bcryptFunctions');
 const { findUserByEmail } = require('../../model/user');
 const { ApiError: { SendToErrorMiddleware } } = require('../../error/apiError');
 const { INCORRECT_LOGIN, USER_DOES_NOT_EXIST } = require('../../error/msgCodeError');
@@ -9,7 +9,9 @@ const login = async ({ email, password: inputPassword }) => {
 
   if (!user) return SendToErrorMiddleware(USER_DOES_NOT_EXIST);
 
-  if (md5(inputPassword) !== user.password) return SendToErrorMiddleware(INCORRECT_LOGIN);
+  const matchPassword = await comparator(inputPassword, user.password);
+
+  if (!matchPassword) return SendToErrorMiddleware(INCORRECT_LOGIN);
 
   const { _id, name } = user;
 
