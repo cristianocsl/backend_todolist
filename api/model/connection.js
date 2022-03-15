@@ -1,6 +1,6 @@
 const { mongoClientOption } = require('./mongoClientMode');
 
-const client = mongoClientOption.localhost;
+const client = mongoClientOption.heroku;
 
 const bootStrap = async () => {
   try {
