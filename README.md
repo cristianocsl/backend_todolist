@@ -354,7 +354,7 @@ Caso de sucesso na validação da requisição terá resposta com <code>status 2
 - [http-status-codes](https://www.npmjs.com/package/http-status-codes): facilitar legibilidade dos códigos http;
 - [joi](https://www.npmjs.com/package/joi): validação de requisições;
 - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken): realiza autenticação entre duas partes por meio de um token assinado que autentica uma requisição web;
-- [md5](https://www.npmjs.com/package/md5): criptografia;
+- [bcrypt](https://www.npmjs.com/package/bcryptjs): criptografia;
 - [mongodb](https://www.npmjs.com/package/mongodb): comunicação com bancos de dados;
 - [nodemon](https://www.npmjs.com/package/nodemon): permite modo watch do servidor durante o desenvolvimento.
 
