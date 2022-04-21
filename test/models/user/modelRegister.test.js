@@ -1,16 +1,18 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable mocha/no-mocha-arrows */
 const sinon = require('sinon');
 const { expect } = require('chai');
-const { MongoClient } = require('mongodb');
-const { getConnection } = require('../modelConnection.test');
+const { MongoClient, ObjectId } = require('mongodb');
+const { getConnection } = require('../modelConnection');
 
-const UserModel = require('../../../api/model/user/register');
+const { register } = require('../../../api/model/user');
 
 describe('Insere um novo usuário BD', function () {
   let connectionMock;
 
   const payloadUser = {
-    nome: 'Example Movie',
-    email: 'Jane Dow',
+    nome: 'Ana',
+    email: 'ganedow@gmail.com',
     senha: 'shalom33',
   };
 
@@ -20,21 +22,32 @@ describe('Insere um novo usuário BD', function () {
   });
 
   after(async function () {
-    await connectionMock.db('todo_list').collection('user').drop();
     MongoClient.connect.restore();
   });
 
   describe('quando é inserido com sucesso', function () {
     it('retorna um objeto', async function () {
-      const response = await UserModel.register(payloadUser);
+      const response = await register({ ...payloadUser });
 
       expect(response).to.be.a('object');
     });
 
-    it('tal objeto possui o "id" do novo usuário inserido', async function () {
-      const response = await UserModel.register(payloadUser);
+    it('tal objeto possui uma "_id" do novo usuário inserido', async function () {
+      const response = await register({ ...payloadUser });
 
-      expect(response).to.have.a.property('id');
+      expect(response).to.have.a.property('_id');
+    });
+
+    it('deve existir um usuário cadastrado', async () => {
+      const { _id } = await register({
+          nome: 'Ana Maria',
+          email: 'ganedow@gmail.com',
+          senha: 'shalom33',
+        });
+      const db = await connectionMock.db('todoDatabase');
+      const coll = await db.collection('users');
+      const id = await coll.find(ObjectId(_id));
+      expect(id).to.be.not.null;
     });
   });
 });
