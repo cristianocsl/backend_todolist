@@ -40,7 +40,7 @@ describe('Insere um novo usuário BD', function () {
 
     it('deve existir um usuário cadastrado', async () => {
       const { _id } = await register({
-          nome: 'Ana',
+          nome: 'Ana Maria',
           email: 'ganedow@gmail.com',
           senha: 'shalom33',
         });
