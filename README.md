@@ -5,7 +5,7 @@
 API (Application Programming Interface) desenvolvida em NodeJS com MongoDB e MongoDB Atlas. Utiliza arquitetura em camadas (MSC - Model Service Controllers) e constitui parte integrante de uma aplicação fullstack com o objetivo de fazer o gerenciamento de uma lista de tarefas a partir da criação, atualização e remoção de cada tarefa. Estas operações podem ser realizadas por usuários previamente cadastrados, através de uma tela de cadastro, tendo o acesso à tela de tarefas através de uma tela de login.
 
 ------------
-### Veja a aplicação no ar por este link: https://frontend-todolist-cris.herokuapp.com/
+### Veja a aplicação no ar por este link: https://frontend-todolist.vercel.app/register
 ------------
 
 ## Rotas
