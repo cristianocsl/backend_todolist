@@ -6,6 +6,7 @@ API (Application Programming Interface) desenvolvida em NodeJS com MongoDB e Mon
 
 ------------
 ### Veja a aplicação no ar por este link: https://frontend-todolist.vercel.app/register
+### Acesse a parte de front-end deste projeto em: https://github.com/cristianocsl/frontend_todolist
 ------------
 
 ## Rotas
